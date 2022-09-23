@@ -1,0 +1,21 @@
+import os
+path=r'C:\Users\flychen\Desktop\output_hand_withouthood_droid'
+num=16
+dir_list=[]
+old_name_list=[]
+new_name_list=[]
+for k in os.listdir(path):
+    dir_list.append(k)
+
+
+  
+
+for i in dir_list:
+      try:
+        old_name=path+'\\'+i+'\\'+i+'_result.txt'
+        new_name=path+'\\'+i+'__result.txt'
+        os.rename(old_name,new_name)
+      except FileNotFoundError:
+          pass
+
+  
